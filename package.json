@@ -1,34 +1,48 @@
-hook.js:608 Error
-    at u (history.ts:494:11)
-    at be (components.tsx:429:3)
-    at vi (react-dom.production.min.js:160:137)
-    at ks (react-dom.production.min.js:289:337)
-    at bu (react-dom.production.min.js:279:389)
-    at gu (react-dom.production.min.js:279:320)
-    at vu (react-dom.production.min.js:279:180)
-    at au (react-dom.production.min.js:270:88)
-    at ou (react-dom.production.min.js:267:429)
-    at S (scheduler.production.min.js:13:203)
-overrideMethod @ hook.js:608
-dl @ react-dom.production.min.js:188
-n.callback @ react-dom.production.min.js:188
-Ha @ react-dom.production.min.js:156
-xs @ react-dom.production.min.js:261
-bs @ react-dom.production.min.js:259
-ys @ react-dom.production.min.js:258
-(anonymous) @ react-dom.production.min.js:282
-wu @ react-dom.production.min.js:280
-ou @ react-dom.production.min.js:269
-S @ scheduler.production.min.js:13
-O @ scheduler.production.min.js:14Understand this error
-history.ts:494 Uncaught Error
-    at u (history.ts:494:11)
-    at be (components.tsx:429:3)
-    at vi (react-dom.production.min.js:160:137)
-    at ks (react-dom.production.min.js:289:337)
-    at bu (react-dom.production.min.js:279:389)
-    at gu (react-dom.production.min.js:279:320)
-    at vu (react-dom.production.min.js:279:180)
-    at au (react-dom.production.min.js:270:88)
-    at ou (react-dom.production.min.js:267:429)
-    at S (scheduler.production.min.js:13:203)
+{
+  "name": "gym-exercises",
+  "homepage": "https://rastindesign.github.io/Gym-exercises/",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.1",
+    "@mui/material": "^5.6.1",
+    "gh-pages": "^6.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-horizontal-scrolling-menu": "^2.7.1",
+    "react-loader-spinner": "^6.0.0-0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
