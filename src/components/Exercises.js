@@ -9,28 +9,29 @@ import Loader from "./Loader";
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [exercisesPerPage] = useState(6);
+  
+useEffect(() => {
+  const fetchExercisesData = async () => {
+    let exercisesData = [];
 
-  useEffect(() => {
-    const fetchExercisesData = async () => {
-      let exercisesData = [];
+    if (bodyPart === "all") {
+      exercisesData = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises",
+        exercisesOptions
+      );
+    } else {
+      exercisesData = await fetchData(
+        `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
+        exercisesOptions
+      );
+    }
 
-      if (bodyPart === "all") {
-        exercisesData = await fetchData(
-          "https://exercisedb.p.rapidapi.com/exercises",
-          exercisesOptions
-        );
-      } else {
-        exercisesData = await fetchData(
-          `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
-          exercisesOptions
-        );
-      }
+    setExercises(exercisesData);
+  };
 
-      setExercises(exercisesData);
-    };
+  fetchExercisesData();
+}, [bodyPart, setExercises]); // Added setExercises to the dependency array
 
-    fetchExercisesData();
-  }, [bodyPart]);
 
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
