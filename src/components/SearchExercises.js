@@ -12,10 +12,13 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     const fetchExercisesData = async () => {
       const bodyPartsData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
-        exercisesOptions
+        exercisesOptions,
       );
 
-      setBodyParts(["all", ...bodyPartsData]);
+      setBodyParts([
+        "all",
+        ...(Array.isArray(bodyPartsData) ? bodyPartsData : []),
+      ]);
     };
 
     fetchExercisesData();
@@ -25,15 +28,17 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     if (search) {
       const exercisesData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises",
-        exercisesOptions
+        exercisesOptions,
       );
 
-      const searchedExercises = exercisesData.filter(
+      const searchedExercises = (
+        Array.isArray(exercisesData) ? exercisesData : []
+      ).filter(
         (item) =>
           item.name.toLowerCase().includes(search) ||
           item.target.toLowerCase().includes(search) ||
           item.equipment.toLowerCase().includes(search) ||
-          item.bodyPart.toLowerCase().includes(search)
+          item.bodyPart.toLowerCase().includes(search),
       );
 
       window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });

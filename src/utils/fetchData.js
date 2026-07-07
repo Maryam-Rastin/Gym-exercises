@@ -17,8 +17,15 @@ export const youtubeOptions = {
 
 
 export const fetchData = async (url, options) => {
-  const response = await fetch(url, options);
-  const data = await response.json();
-
-  return data;
+  try {
+    const response = await fetch(url, options);
+    if (!response.ok) {
+      console.error(`API error: ${response.status}`);
+      return []; // fallback so callers never get a non-iterable
+    }
+    return await response.json();
+  } catch (err) {
+    console.error('Network error:', err);
+    return [];
+  }
 };
