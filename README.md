@@ -1,54 +1,49 @@
-# Gym Exercises
+### Gym Exercises
 
 A modern React-based fitness application that helps users discover exercises, explore workout routines, and learn proper exercise techniques through an intuitive and responsive interface.
 
-## Overview
+**Live demo:** [https://maryam-rastin.github.io/Gym-exercises/](https://maryam-rastin.github.io/Gym-exercises/)
+
+### Overview
 
 Gym Exercises is a web application designed to make fitness information accessible and easy to explore. The application fetches exercise data asynchronously from a remote API, providing users with up-to-date exercise information, workout suggestions, and fitness guidance.
 
 Built with React and Material UI, the project demonstrates modern frontend development practices including component-based architecture, client-side routing, API integration, and responsive design.
 
-## Features
+### Features
 
 * Browse a large collection of exercises
 * Search exercises by name
 * Explore exercises by body part
 * View detailed exercise information
 * Discover related exercises
-* Responsive design for desktop and mobile devices
+* Responsive and mobile-friendly design
 * Fast and dynamic user experience powered by React
 * Async API data fetching for real-time exercise content
 
-## Tech Stack
+### Tech Stack
 
-### Frontend
+**Frontend**
 
 * React 18
 * React Router DOM
 * Material UI (MUI)
 * Emotion (CSS-in-JS)
 
-### Additional Libraries
+**Additional Libraries**
 
 * React Horizontal Scrolling Menu
 * React Loader Spinner
 
-### Deployment
+**Deployment**
 
 * GitHub Pages
 
-## Screenshots
+### Screenshots
 
-> Add screenshots here to showcase the application interface.
+![Home Page](./screenshot/1.png)
 
-Example:
-
-```markdown
-![Home Page](./screenshots/home.png)
-![Exercise Details](./screenshots/details.png)
-```
-
-## Installation
+### Installation
 
 Clone the repository:
 
@@ -76,37 +71,47 @@ npm start
 
 The application will run locally at:
 
-```text
+```
 http://localhost:3000
 ```
 
-## Build for Production
+### Build for Production
+
+Create an optimized production build:
 
 ```bash
 npm run build
 ```
 
-## Deployment
+This generates a `build` folder containing the production-ready static files.
 
-Deploy to GitHub Pages:
+### Deployment
+
+This project is deployed to GitHub Pages. Deploy the latest build with:
 
 ```bash
 npm run deploy
 ```
 
-## Project Structure
+This publishes the contents of the `build` folder to GitHub Pages.
 
-```text
-src/
-├── assets/
-├── components/
-├── pages/
-├── utils/
-├── App.js
-└── index.js
+### Project Structure
+
+```
+Gym-exercises/
+├── src/
+│   ├── assets/             # Images, icons, and static assets
+│   ├── components/         # Reusable UI components
+│   ├── pages/               # Page-level views
+│   ├── utils/                # Helper functions and utilities
+│   ├── App.js
+│   └── index.js
+├── screenshot/             # Project screenshots for README
+├── package.json
+└── README.md
 ```
 
-## Learning Objectives
+### Learning Objectives
 
 This project was built to strengthen skills in:
 
@@ -118,7 +123,7 @@ This project was built to strengthen skills in:
 * Material UI implementation
 * Frontend deployment workflows
 
-## Future Improvements
+### Future Improvements
 
 * User authentication
 * Workout plan creation
@@ -128,16 +133,12 @@ This project was built to strengthen skills in:
 * Advanced filtering and sorting
 * Personalized workout recommendations
 
-## What I Learned
+### What I Learned
 
 Through this project, I gained practical experience building a data-driven React application, working with third-party APIs, creating reusable UI components, and deploying production-ready applications to GitHub Pages.
 
-## Author
+### Author
 
-**Maryam Rastin**
+Maryam Rastin
 
-GitHub: https://github.com/Maryam-Rastin
-
-## License
-
-This project is open source and available under the MIT License.
+GitHub: [https://github.com/Maryam-Rastin](https://github.com/Maryam-Rastin)
