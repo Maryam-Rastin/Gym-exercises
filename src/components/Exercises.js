@@ -82,6 +82,11 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             size="large"
           />
         )}
+        if (error) return{" "}
+        <Typography textAlign="center" mt="50px">
+          Couldn't load exercises. Please try again later.
+        </Typography>
+        ; if (!currentExercises.length) return <Loader />;
       </Stack>
     </Box>
   );
