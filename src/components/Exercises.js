@@ -48,6 +48,14 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     window.scrollTo({ top: 1800, behavior: "smooth" });
   };
 
+  if (error) {
+    return (
+      <Typography textAlign="center" mt="50px">
+        Couldn't load exercises. Please try again later.
+      </Typography>
+    );
+  }
+
   if (!currentExercises.length) return <Loader />;
 
   return (
@@ -82,11 +90,6 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             size="large"
           />
         )}
-        if (error) return{" "}
-        <Typography textAlign="center" mt="50px">
-          Couldn't load exercises. Please try again later.
-        </Typography>
-        ; if (!currentExercises.length) return <Loader />;
       </Stack>
     </Box>
   );
